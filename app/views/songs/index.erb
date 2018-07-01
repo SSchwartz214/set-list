@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/reset.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto|Shrikhand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Shrikhand" rel="stylesheet">
+    <title>Songs</title>
+  </head>
+  <body>
+    <header id= "main-header">
+      <h1>Songs</h1>
+    </header>
+  <section class= "songs">
+      <% @songs.each do |song| %>
+        <ul>
+          <img src="http://cdn.marketplaceimages.windowsphone.com/v8/images/6e7677f7-b5e5-406a-a7f3-09af36f63376?imageType=ws_icon_small" alt="music note"/>
+          <li> <%= song.title %> </li>
+          <li> <%= song.length %> seconds</li>
+          <li>Play Count: <%= song.play_count %> </li>
+          <% if song.playlist %>
+            <li><% song.playlist.name %></li>
+          <% end %>
+        </ul>
+        <% end %>
+  </section>
+  </body>
+</html>
