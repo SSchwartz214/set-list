@@ -13,6 +13,7 @@
     </header>
   <section class= "songs">
       <% @songs.each do |song| %>
+      <section class="song">
         <ul>
           <img src="http://cdn.marketplaceimages.windowsphone.com/v8/images/6e7677f7-b5e5-406a-a7f3-09af36f63376?imageType=ws_icon_small" alt="music note"/>
           <li> <%= song.title %> </li>
@@ -22,6 +23,7 @@
             <li><% song.playlist.name %></li>
           <% end %>
         </ul>
+      </section>
         <% end %>
   </section>
   </body>

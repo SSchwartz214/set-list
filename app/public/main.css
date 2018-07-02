@@ -16,6 +16,10 @@ body {
   grid-row-gap: 25px;
 }
 
+.song {
+  background-color: lightgrey;
+}
+
 img{
   border-radius: 50%
 }
